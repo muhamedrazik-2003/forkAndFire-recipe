@@ -11,16 +11,25 @@
     justify-content: center;
     font-size: 56px;
     color: rgb(160, 4, 4);
-    padding: 50px;
+    padding: 72px 50px 40px;
+    text-decoration:underline ;
 
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 100px;
+    
 }
 .contents {
     display: flex;
-    justify-content: center;
-    font-size: 24px;
-    padding: 15px;
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 40px;
     color: rgb(0, 0, 0);
-    writing-mode:horizontal-tb;
+    writing-mode:vertical-rl;
+    
 }
 .container {
     display: flex;
@@ -29,8 +38,7 @@
     text-decoration: none;
     gap: 2rem;
     height: 620px;
-    font-weight: 900;
-    font-size: 16px;
+    
     
 }
 .croissants {
@@ -46,5 +54,19 @@
 img {
     border: 4px transparent;
     border-radius: 30px;
+}
+p {
+    padding-top: 8px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    
+
 }
     
