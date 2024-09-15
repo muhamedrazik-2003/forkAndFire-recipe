@@ -1,39 +1,50 @@
 
 * {
-    font-family: 'Times New Roman', Times, serif;
-    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
     background-color: rgb(243, 223, 199);
 }
 
-h1,
-h2 {
-   
-    text-transform: uppercase;
-    text-align: center;
-}
-h1 {
-    
-    font-size: 50px;
+.heading {
+    display: flex;
+    justify-content: center;
+    font-size: 56px;
     color: rgb(160, 4, 4);
-    background: white;
     padding: 50px;
-    border: 10px solid darkred;
+
 }
-h2{
-    padding: 10px;
-    background-color: black;
-    color: white;
+.contents {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    writing-mode:horizontal-tb;
 }
-ol,
-a {
-    display: block;
-    padding: 10px;
+.container {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    line-height: 1.5;
-    color: rgb(26, 1, 1);
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 700;list-style-type:none;
+    gap: 2rem;
+    height: 620px;
+    font-weight: 900;
+    font-size: 16px;
     
+}
+.croissants {
+    align-self: flex-start;
+    
+}
+.eggplant {
+    align-self: center;
+}
+.muffins {
+    align-self: flex-end;
+}
+img {
+    border: 4px transparent;
+    border-radius: 30px;
 }
     
