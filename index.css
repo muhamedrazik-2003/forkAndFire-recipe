@@ -69,4 +69,20 @@ footer {
     
 
 }
+.recipe-image {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 48px 36px 0px;
+}
+.recipe-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    line-height: 1.5;
+    font-weight: 200;
+    font-size: 20px;
+    padding: 100px 150px 150px 150px;
+
+}
     
