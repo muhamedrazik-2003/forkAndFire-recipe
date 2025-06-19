@@ -94,7 +94,7 @@ h1 {
     margin: 0 auto;
     width: 100%;
     max-width: 720px;
-    font-size: 58px;
+    font-size: 62px;
     line-height: 1.1;
 }
 
@@ -130,9 +130,10 @@ nav ul {
     width: 100%;
     display: flex;
     /* gap: 40px; */
+    justify-items: center;
     text-decoration: none;
     list-style: none;
-    padding: 24px 72px;
+    padding: 24px 72px 0px;
 
 }
 
@@ -147,16 +148,19 @@ nav a:hover {
 
 nav .logo {
     margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .hero {
-    padding: 90px 0;
+    padding: 100px 0;
 }
 
 main {
     background-color: white;
     padding: 40px;
-    margin-bottom: 24px;
+    margin-bottom: 100px;
     border-radius: 16px;
     width: 100%;
     max-width: 840px;
@@ -230,7 +234,10 @@ footer {
 
     nav ul {
         gap: 0;
-        padding: 18px 24px;
+        padding: 18px;
+    }
+    nav ul span {
+        /* display: none; */
     }
 
     .hero {
