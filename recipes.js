@@ -43,7 +43,8 @@ const recipes = [
   {
     id: "croissants",
     title: "Savory Stuffed Croissant Recipe",
-    shortDescription:"Buttery croissants stuffed with fresh greens, mozzarella, and a pesto twist.",
+    shortDescription:
+      "Buttery croissants stuffed with fresh greens, mozzarella, and a pesto twist.",
     description:
       "A buttery, flaky croissant turned into a flavorful savory meal. This recipe stuffs fresh croissants with pesto, mozzarella, roasted tomatoes, and peppery greens — then bakes them to perfection. Great for breakfast, brunch, or a light lunch.",
     image: "../images/recipes/croissants.jpg",
@@ -79,7 +80,8 @@ const recipes = [
   {
     id: "eggplant",
     title: "Simple Roasted Eggplant Recipe",
-    shortDescription:"Roasted eggplants filled with a savory, spiced veggie and breadcrumb mix.",
+    shortDescription:
+      "Roasted eggplants filled with a savory, spiced veggie and breadcrumb mix.",
     description:
       "An easy, flavorful dish that makes a perfect side or main. This roasted eggplant is tender on the inside, slightly crisp on the outside, and packed with savory umami flavor. Great on its own or served with rice, bread, or yogurt dip.",
     image: "../images/recipes/eggplant.webp",
@@ -115,7 +117,8 @@ const recipes = [
   {
     id: "omlette",
     title: "Simple Omlette Recipe",
-    shortDescription:"A fluffy, protein-packed classic made with eggs and your favorite fillings.",
+    shortDescription:
+      "A fluffy, protein-packed classic made with eggs and your favorite fillings.",
     description:
       "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
     image: "../images/recipes/image-omelette.jpeg",
@@ -150,16 +153,73 @@ const recipes = [
 // home page recipe card data injection
 const recipesWrapper = document.querySelector(".recipes-wrapper");
 
-const cardData = recipes.map((recipe) => {
-    return  `<section class="recipe-card">
-                <a href="./recipe-pages/recipe.html/${recipe.id}">
+const recipeTitle = document.title;
+const recipeImage = document.querySelector("#recipe-image");
+const recipeHeading = document.querySelector(".heading");
+const recipeDescription = document.querySelector(".description");
+const recipePreperation = document.querySelector(".preperation-data");
+const recipeIngredients = document.querySelector(".ingredients-data");
+const recipeInstructions = document.querySelector(".instructions-data");
+const recipeNutrition = document.querySelector(".nutrition-data");
+
+const currentPath = window.location.pathname;
+if (currentPath === "/" || currentPath.includes("index.html")) {
+  const cardData = recipes
+    .map((recipe) => {
+      return `<section class="recipe-card">
+                <a href="./recipe.html?id=${recipe.id}">
                     <div class="recipe-image">
                         <img src=${recipe.image} alt=${recipe.title}>
                     </div>
                     <h2>${recipe.title}</h2>
                     <p>${recipe.shortDescription}</p>
                 </a>
-            </section>`
-}).join("");
+            </section>`;
+    })
+    .join("");
 
-recipesWrapper.innerHTML = cardData;
+  recipesWrapper.innerHTML = cardData;
+}
+
+const params = new URLSearchParams(window.location.search);
+const recipeId = params.get("id");
+currentRecipe = recipes.find((recipe) => recipe.id === recipeId);
+
+recipeTitle.innerHTML = currentRecipe.title;
+recipeImage.src = currentRecipe.image;
+recipeImage.alt = currentRecipe.title;
+recipeHeading.textContent = currentRecipe.title;
+recipeDescription.textContent = currentRecipe.description;
+recipePreperation.innerHTML = `
+    <li><span>Total:</span> Approximately ${currentRecipe.prepTime.total}</li>
+    <li><span>Preparation:</span>  ${currentRecipe.prepTime.prep}</li>
+    <li><span>Cooking:</span>  ${currentRecipe.prepTime.cook}</li>
+`;
+recipeIngredients.innerHTML = currentRecipe.ingredients
+  .map((ingredient) => {
+    return `<li>${ingredient}</li>`;
+  })
+  .join("");
+recipeInstructions.innerHTML = currentRecipe.instructions
+  .map((nstruction) => {
+    return `<li>${nstruction}</li>`;
+  })
+  .join("");
+recipeNutrition.innerHTML = `
+   <tr>
+        <th>Calories</th>
+        <td>${currentRecipe.nutrition.calories}</td>
+    </tr>
+    <tr>
+        <th>Carbs</th>
+        <td>${currentRecipe.nutrition.carbs}</td>
+    </tr>
+    <tr>
+        <th>Protein</th>
+        <td>${currentRecipe.nutrition.protein}</td>
+    </tr>
+    <tr>
+        <th>Fat</th>
+        <td>${currentRecipe.nutrition.fat}</td>
+    </tr>
+  `;
