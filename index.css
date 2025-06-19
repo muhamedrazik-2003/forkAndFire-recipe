@@ -86,7 +86,7 @@ body {
 
     to {
         opacity: 1;
-        transform: translateY(-1);
+        transform: translateY(6px);
     }
 }
 
@@ -129,7 +129,7 @@ nav ul {
     font-size: 18px;
     width: 100%;
     display: flex;
-    gap: 40px;
+    /* gap: 40px; */
     text-decoration: none;
     list-style: none;
     padding: 24px 72px;
@@ -138,6 +138,11 @@ nav ul {
 
 nav a {
     color: rgb(117, 75, 31);
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(153, 99, 41);
 }
 
 nav .logo {
@@ -163,14 +168,24 @@ main>h2 {
 }
 
 .recipes-wrapper {
+    opacity: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     line-height: 1.5;
     gap: 32px;
-    opacity: 0;
-    animation: fadeIn 600ms ease-in 0.2s forwards;
+    animation: fadeInCards 600ms ease-in 0.2s forwards;
 }
+@keyframes fadeInCards {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 .recipe-card {
     padding: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
@@ -206,11 +221,31 @@ footer {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 1.30rem;
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 0;
+        padding: 18px 24px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    main {
+        border-radius: 0px;
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    main>h2 {
+        font-size: 1.4rem;
+        text-align: center;
     }
 
     footer {
