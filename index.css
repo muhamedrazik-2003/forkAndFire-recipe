@@ -1,41 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
 
 /* reset by Josh Cameo */
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 * {
-  margin: 0;
+    margin: 0;
 }
 
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
 
-input, button, textarea, select {
-  font: inherit;
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
 }
 
 p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
+    text-wrap: pretty;
 }
 
-#root, #__next {
-  isolation: isolate;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
 }
 
 /* custom css start here */
@@ -52,29 +74,51 @@ body {
 }
 
 h1 {
-    font-size: 42px;
+    margin: 0 auto;
+    width: 720px;
+    font-size: 64px;
     line-height: 1.1;
 }
+
 h1,
 h2,
-ul li::marker,
-ol li::marker {
+ul li {
     font-family: "Savate", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    color: rgb(76, 49, 20);
+    color: rgb(117, 75, 31);
 }
+
 h2 {
     font-weight: 600;
     margin-bottom: 8px;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 header {
-    margin: 40px;
+    width: 100%;
+    text-align: center;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    text-decoration: none;
+    list-style: none;
+    padding: 20px 72px;
+
+}
+nav .logo {
+    margin-right: auto;
+}
+.hero {
+    /* font-size: 72px; */
+    padding: 80px 0;
 }
 main {
     background-color: white;
@@ -83,18 +127,21 @@ main {
     width: 100%;
     max-width: 1080px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     line-height: 1.5;
 
 }
+
 .recipe-card {
     padding: 24px;
 }
+
 .recipe-image {
     aspect-ratio: 4 / 3;
     position: relative;
 }
-.recipe-image img{
+
+.recipe-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -112,9 +159,11 @@ footer {
     h1 {
         font-size: 1.6rem;
     }
+
     h2 {
         font-size: 1.30rem;
     }
+
     footer {
         font-size: 12px;
     }
