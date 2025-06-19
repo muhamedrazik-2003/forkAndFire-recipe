@@ -18,8 +18,14 @@ body {
     font-style: normal;
 }
 
+h1 {
+    line-height: 1.1;
+}
+
 h1,
-h2 {
+h2,
+ul li::marker,
+ol li::marker {
     font-family: "Savate", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -76,10 +82,54 @@ th {
     border-radius: 8px;
     padding: 24px;
 }
-ul,ol {
+
+ul,
+ol {
     padding-left: 24px;
     line-height: 2;
 }
-ol {
+
+ol li {
     line-height: 1.5;
+    padding-bottom: 8px;
+}
+
+.ingredients,
+.insturctions {
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgb(73, 46, 18);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: start;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgb(207, 206, 205);
+}
+footer {
+    padding: 8px;
+    color: rgb(54, 28, 0);
+}
+
+@media (max-width: 480px) {
+    main {
+        /* overflow: hidden; */
+        margin: 0;
+        border-radius: 0px;
+    }
+
+    .recipe-image {
+        width: 96vw;
+        margin: -40px -40px 0 -40px;
+    }
+
+    .recipe-image img {
+        border-radius: 0px;
+    }
+
 }
