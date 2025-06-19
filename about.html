@@ -5,26 +5,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About</title>
-  <link rel="stylesheet" href="recipe-pages/recipes.css" />
+  <link rel="stylesheet" href="/recipes.css" />
 </head>
 
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li class="logo">
+          <img width="30px" src="./images/logo.png" alt="">
+          <span>Odin's recipes</span>
+        </li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
     <section id="About">
       <h2>About This Project</h2>
       <p>
-        Odin's Recipe began as a simple assignment from the Odin Project. The goal was to build a website with a homepage
-        that displays a few recipes and allows users to navigate to individual recipe pages.
+        Odin's Recipe began as a simple assignment from The Odin Project. The goal was to create a website with a
+        homepage that showcases a few recipes and allows users to navigate to individual recipe pages.
       </p>
+
       <p>
-        The first version, created on <strong>August 2024</strong>, was a basic layout — mostly plain text and images
-        without much styling or structure.
+        The first version, built in <strong>August 2024</strong>, featured a basic layout — mostly plain text and images
+        with minimal styling and structure.
       </p>
+
       <p>
-        Fast forward 10 months to <strong>June 2025</strong>, I've completely redesigned the site with a modern, clean
-        layout, improved typography, spacing, and subtle animations to enhance the user experience.
+        Fast forward 10 months to <strong>June 2025</strong>, the entire site has been redesigned with a modern, clean
+        layout, improved typography, better spacing, and subtle animations to enhance the user experience.
       </p>
-      <p>Currently i have only redesigned the website </p>
+
+      <p>
+        One major update is the introduction of a single dynamic recipe page. Instead of having a separate HTML file for
+        each recipe, the site now uses JavaScript to inject recipe data into a single <code>recipe.html</code> page.
+        When a user clicks on a recipe card, the corresponding recipe ID is passed through the URL, and the page loads
+        the correct content dynamically.
+      </p>
 
       <div class="before-after">
         <figure>
@@ -46,11 +65,15 @@
       </div>
 
       <p>
-        This project reflects my growth as a frontend developer — from building with raw HTML and basic structure to creating
-        responsive layouts, designing clean UIs, and thinking like a user.
+        This project reflects my growth as a frontend developer — evolving from writing raw HTML layouts to building
+        dynamic, responsive UIs with clean structure and user-focused design.
       </p>
     </section>
   </main>
+
+  <footer>
+    By Muhamed Razik 😉 | Recipe Page 2025
+  </footer>
 </body>
 
 </html>

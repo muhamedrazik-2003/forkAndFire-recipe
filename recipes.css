@@ -166,14 +166,51 @@ footer {
 }
 
 /* About page Style */
+header {
+    width: 100%;
+    text-align: center;
+}
+nav ul {
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    /* gap: 40px; */
+    justify-items: center;
+    text-decoration: none;
+    list-style: none;
+    padding: 24px 72px 0px;
 
+}
+
+nav a {
+    text-decoration: none;
+    font-family: "Savate", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(117, 75, 31);
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(153, 99, 41);
+}
+
+nav .logo {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 figure {
     width: 100%;
     padding: 24px;
     text-align: center;
 }
 figcaption {
-    margin-top: 8px;
+    margin-top: 12px;
+    color: rgb(117, 75, 31);
 }
 figure img{
     border-radius: 16px;
@@ -183,6 +220,15 @@ figure img{
 .before-after {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+#About p {
+    line-height: 2;
+    padding-bottom: 16px;
+} code {
+    color: rgb(117, 75, 31);
+    font-weight: 700;
+    background-color: rgb(255, 236, 215);;
+
 }
 
 @media (max-width: 480px) {

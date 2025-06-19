@@ -181,6 +181,7 @@ if (currentPath === "/" || currentPath.includes("index.html")) {
   recipesWrapper.innerHTML = cardData;
 }
 
+// recipe.html datainjection
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get("id");
 currentRecipe = recipes.find((recipe) => recipe.id === recipeId);
