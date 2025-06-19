@@ -61,6 +61,10 @@ h6 {
 }
 
 /* custom css start here */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -71,12 +75,26 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    animation: fadeIn 600ms ease-out both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-1);
+    }
 }
 
 h1 {
     margin: 0 auto;
-    width: 720px;
-    font-size: 64px;
+    width: 100%;
+    max-width: 720px;
+    font-size: 58px;
     line-height: 1.1;
 }
 
@@ -93,6 +111,8 @@ ul li {
 h2 {
     font-weight: 600;
     margin-bottom: 8px;
+    font-size: 1.2rem;
+    line-height: 1.3;
 }
 
 a {
@@ -104,41 +124,70 @@ header {
     width: 100%;
     text-align: center;
 }
-nav ul{
+
+nav ul {
+    font-size: 18px;
     width: 100%;
     display: flex;
-    gap: 24px;
+    gap: 40px;
     text-decoration: none;
     list-style: none;
-    padding: 20px 72px;
+    padding: 24px 72px;
 
 }
+
+nav a {
+    color: rgb(117, 75, 31);
+}
+
 nav .logo {
     margin-right: auto;
 }
+
 .hero {
-    /* font-size: 72px; */
-    padding: 80px 0;
+    padding: 90px 0;
 }
+
 main {
     background-color: white;
     padding: 40px;
+    margin-bottom: 24px;
     border-radius: 16px;
     width: 100%;
-    max-width: 1080px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    line-height: 1.5;
+    max-width: 840px;
+}
 
+main>h2 {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+}
+
+.recipes-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    line-height: 1.5;
+    gap: 32px;
+    opacity: 0;
+    animation: fadeIn 600ms ease-in 0.2s forwards;
 }
 
 .recipe-card {
-    padding: 24px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    border: none;
+    border-radius: 16px;
+    transition: all 300ms ease
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .recipe-image {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 4;
     position: relative;
+    margin-bottom: 16px;
 }
 
 .recipe-image img {
@@ -146,7 +195,7 @@ main {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 8px;
+    border-radius: 14px;
 }
 
 footer {

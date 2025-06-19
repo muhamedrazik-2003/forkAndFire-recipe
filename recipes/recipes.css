@@ -82,7 +82,19 @@ main {
     line-height: 1.5;
     display: flex;
     flex-direction: column;
+    animation: fadeIn 600ms ease-out both;
     gap: 24px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-1);
+    }
 }
 
 .recipe-image {
