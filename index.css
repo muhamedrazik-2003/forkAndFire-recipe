@@ -179,6 +179,10 @@ main>h2 {
     gap: 32px;
     animation: fadeInCards 600ms ease-in 0.2s forwards;
 }
+.recipes-wrapper p {
+    font-size: 15px;
+    margin-top: 16px;
+}
 @keyframes fadeInCards {
     from {
         opacity: 0;
@@ -236,10 +240,6 @@ footer {
         gap: 0;
         padding: 18px;
     }
-    nav ul span {
-        /* display: none; */
-    }
-
     .hero {
         padding: 45px 0;
     }

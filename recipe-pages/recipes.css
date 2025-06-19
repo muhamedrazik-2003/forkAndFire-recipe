@@ -180,10 +180,10 @@ figure img{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     /* margin: 20px; */
 }
-/* .before-after {
+.before-after {
     display: grid;
     grid-template-columns: 1fr 1fr;
-} */
+}
 
 @media (max-width: 480px) {
     main {
