@@ -1,88 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* reset by Josh Cameo */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family:'Times New Roman', Times, serif;
-    background-color: rgb(243, 223, 199);
+  margin: 0;
 }
 
-.heading {
-    display: flex;
-    justify-content: center;
-    font-size: 56px;
-    color: rgb(160, 4, 4);
-    padding: 72px 50px 40px;
-    text-decoration:underline ;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
 
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center ;
-    padding: 100px;
-    
+
+input, button, textarea, select {
+  font: inherit;
 }
-.contents {
-    display: flex;
-    font-size: 40px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 40px;
-    color: rgb(0, 0, 0);
-    writing-mode:vertical-rl;
-    
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    gap: 2rem;
-    height: 620px;
-    
-    
-}
-.croissants {
-    align-self: flex-start;
-    
-}
-.eggplant {
-    align-self: center;
-}
-.muffins {
-    align-self: flex-end;
-}
-img {
-    border: 4px transparent;
-    border-radius: 30px;
-}
+
 p {
-    padding-top: 8px;
-    font-weight: 900;
-    font-size: 18px;
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* custom css start here */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(39, 100%, 84%);
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.1;
+}
+h1,
+h2,
+ul li::marker,
+ol li::marker {
+    font-family: "Savate", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(76, 49, 20);
+}
+h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header {
+    margin: 40px;
+}
+main {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    line-height: 1.5;
+
+}
+.recipe-card {
+    padding: 24px;
+}
+.recipe-image {
+    aspect-ratio: 4 / 3;
+    position: relative;
+}
+.recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    
+    font-size: 14px;
+    padding: 8px;
+    color: rgb(54, 28, 0);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.30rem;
+    }
+    footer {
+        font-size: 12px;
+    }
 
 }
-.recipe-image {
-    display: flex;
-    justify-content: center;
-    align-items: center ;
-    padding: 48px 36px 0px;
-}
-.recipe-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    line-height: 1.5;
-    font-weight: 200;
-    font-size: 20px;
-    padding: 100px 150px 150px 150px;
-
-}
-    

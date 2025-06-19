@@ -1,11 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* reset by Josh Cameo */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* custom css start here */
 body {
     display: flex;
     flex-direction: column;
@@ -30,7 +63,7 @@ ol li::marker {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    color: rgb(155, 100, 41);
+    color: rgb(117, 75, 31);
 }
 
 h2 {
@@ -71,10 +104,13 @@ main {
 }
 
 span,
-th {
+td {
     font-weight: 700;
     color: rgb(73, 46, 18);
     ;
+}
+th {
+    font-weight: 500;
 }
 
 .preperation {
@@ -95,7 +131,7 @@ ol li {
 }
 
 .ingredients,
-.insturctions {
+.instructions {
     padding-bottom: 24px;
     border-bottom: 1px solid rgb(73, 46, 18);
 }
@@ -112,24 +148,36 @@ td {
     border-bottom: 1px solid rgb(207, 206, 205);
 }
 footer {
+    font-size: 14px;
     padding: 8px;
     color: rgb(54, 28, 0);
 }
 
 @media (max-width: 480px) {
     main {
-        /* overflow: hidden; */
+        padding: 32px;
         margin: 0;
         border-radius: 0px;
+        font-size: 15px;
+        overflow: hidden;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.30rem;
     }
 
     .recipe-image {
-        width: 96vw;
+        width: 98vw;
         margin: -40px -40px 0 -40px;
     }
 
     .recipe-image img {
         border-radius: 0px;
+    }
+    footer {
+        font-size: 12px;
     }
 
 }
