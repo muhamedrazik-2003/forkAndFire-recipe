@@ -163,7 +163,7 @@ const recipeInstructions = document.querySelector(".instructions-data");
 const recipeNutrition = document.querySelector(".nutrition-data");
 
 const currentPath = window.location.pathname;
-if (currentPath === "/" || currentPath.includes("index.html")) {
+if (currentPath === "/" || currentPath.includes("index.html") || document.title === "Odin's Recipe") {
   const cardData = recipes
     .map((recipe) => {
       return `<section class="recipe-card">
