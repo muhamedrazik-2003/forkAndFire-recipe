@@ -84,7 +84,7 @@ const recipes = [
       "Roasted eggplants filled with a savory, spiced veggie and breadcrumb mix.",
     description:
       "An easy, flavorful dish that makes a perfect side or main. This roasted eggplant is tender on the inside, slightly crisp on the outside, and packed with savory umami flavor. Great on its own or served with rice, bread, or yogurt dip.",
-    image: "../images/recipes/eggplant.webp",
+    image: "./images/recipes/eggplant.webp",
     prepTime: {
       total: "40 minutes",
       prep: "10 minutes",
