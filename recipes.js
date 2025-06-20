@@ -5,7 +5,7 @@ const recipes = [
     shortDescription: "Soft, fluffy muffins loaded with fresh berries.",
     description:
       "Light, fluffy, and bursting with juicy blueberries, these muffins are a timeless treat perfect for breakfast or a midday snack. They're easy to bake, store well, and smell incredible fresh from the oven.",
-    image: "../images/recipes/muffins.jpg",
+    image: "./images/recipes/muffins.jpg",
     prepTime: {
       total: "30 minutes",
       prep: "10 minutes",
@@ -47,7 +47,7 @@ const recipes = [
       "Buttery croissants stuffed with fresh greens, mozzarella, and a pesto twist.",
     description:
       "A buttery, flaky croissant turned into a flavorful savory meal. This recipe stuffs fresh croissants with pesto, mozzarella, roasted tomatoes, and peppery greens — then bakes them to perfection. Great for breakfast, brunch, or a light lunch.",
-    image: "../images/recipes/croissants.jpg",
+    image: "./images/recipes/croissants.jpg",
     prepTime: {
       total: "20 minutes",
       prep: "10 minutes",
@@ -121,7 +121,7 @@ const recipes = [
       "A fluffy, protein-packed classic made with eggs and your favorite fillings.",
     description:
       "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
-    image: "../images/recipes/image-omelette.jpeg",
+    image: "./images/recipes/image-omelette.jpeg",
     prepTime: {
       total: "10 minutes",
       prep: "5 minutes",
