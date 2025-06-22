@@ -203,7 +203,7 @@ nav ul {
     font-size: 18px;
     width: 100%;
     display: flex;
-    /* gap: 40px; */
+    gap: 40px;
     justify-items: center;
     text-decoration: none;
     list-style: none;
