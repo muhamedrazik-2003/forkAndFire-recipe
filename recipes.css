@@ -207,15 +207,17 @@ nav ul {
     justify-items: center;
     text-decoration: none;
     list-style: none;
+    font-weight: 500;
     padding: 24px 72px 0px;
 
+} nav span {
+    font-weight: 500;
 }
 
 nav a {
     text-decoration: none;
     font-style: normal;
     color: rgb(117, 75, 31);
-     font-weight: 600;
     font-style: normal;
     color: rgb(64, 43, 17);
 }
@@ -236,15 +238,18 @@ nav .logo {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 figure {
     width: 100%;
     padding: 24px;
     text-align: center;
 }
+
 figcaption {
     margin-top: 12px;
     color: rgb(117, 75, 31);
 }
+
 figure img {
     border-radius: 16px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
@@ -301,6 +306,7 @@ code {
     .recipe-image-container img {
         border-radius: 0px;
     }
+
     .before-after {
         grid-template-columns: 1fr;
     }
