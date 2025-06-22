@@ -99,8 +99,7 @@ h1 {
 }
 
 h1,
-h2,
-ul li {
+h2 {
     font-family: "Savate", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -129,12 +128,18 @@ nav ul {
     font-size: 18px;
     width: 100%;
     display: flex;
-    /* gap: 40px; */
+    gap: 40px;
     justify-items: center;
     text-decoration: none;
     list-style: none;
     padding: 24px 72px 0px;
 
+}
+
+nav ul li>a {
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(64, 43, 17);
 }
 
 nav a {
@@ -155,6 +160,13 @@ nav .logo {
 
 .hero {
     padding: 100px 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    /* font-weight: 300; */
+    font-style: italic;
+    margin-top: 24px;
 }
 
 main {
@@ -179,10 +191,12 @@ main>h2 {
     gap: 32px;
     animation: fadeInCards 600ms ease-in 0.2s forwards;
 }
+
 .recipes-wrapper p {
     font-size: 15px;
     margin-top: 16px;
 }
+
 @keyframes fadeInCards {
     from {
         opacity: 0;
@@ -194,6 +208,7 @@ main>h2 {
         transform: translateY(0px);
     }
 }
+
 .recipe-card {
     padding: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
@@ -237,16 +252,27 @@ footer {
     }
 
     nav ul {
-        gap: 0;
-        padding: 18px;
+        font-size: 16px;
+        gap: 15px;
+        padding: 8px 16px;
     }
+
     .hero {
-        padding: 45px 0;
+        padding: 45px 12px 53px;
+    }
+
+    .hero p {
+        margin-top: 16px;
+        font-size: 15px;
+    }
+    nav span {
+        display: none;
     }
 
     main {
         border-radius: 0px;
-        padding: 20px;
+        padding: 32px;
+        margin: 0;
         font-size: 15px;
     }
 

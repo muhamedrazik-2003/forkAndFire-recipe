@@ -84,7 +84,7 @@ const recipes = [
       "Roasted eggplants filled with a savory, spiced veggie and breadcrumb mix.",
     description:
       "An easy, flavorful dish that makes a perfect side or main. This roasted eggplant is tender on the inside, slightly crisp on the outside, and packed with savory umami flavor. Great on its own or served with rice, bread, or yogurt dip.",
-    image: "../images/recipes/eggplant.webp",
+    image: "./images/recipes/eggplant.webp",
     prepTime: {
       total: "40 minutes",
       prep: "10 minutes",
@@ -163,7 +163,11 @@ const recipeInstructions = document.querySelector(".instructions-data");
 const recipeNutrition = document.querySelector(".nutrition-data");
 
 const currentPath = window.location.pathname;
-if (currentPath === "/" || currentPath.includes("index.html") || document.title === "Odin's Recipe") {
+if (
+  currentPath === "/" ||
+  currentPath.includes("index.html") ||
+  document.title === "Odin's Recipe"
+) {
   const cardData = recipes
     .map((recipe) => {
       return `<section class="recipe-card">
@@ -182,31 +186,34 @@ if (currentPath === "/" || currentPath.includes("index.html") || document.title 
 }
 
 // recipe.html datainjection
-const params = new URLSearchParams(window.location.search);
-const recipeId = params.get("id");
-currentRecipe = recipes.find((recipe) => recipe.id === recipeId);
-
-recipeTitle.innerHTML = currentRecipe.title;
-recipeImage.src = currentRecipe.image;
-recipeImage.alt = currentRecipe.title;
-recipeHeading.textContent = currentRecipe.title;
-recipeDescription.textContent = currentRecipe.description;
-recipePreperation.innerHTML = `
+if (currentPath === "/recipe.html" || currentPath.includes("/recipe.html")) {
+  const params = new URLSearchParams(window.location.search);
+  const recipeId = params.get("id");
+  currentRecipe = recipes.find((recipe) => recipe.id === recipeId);
+  if (!currentRecipe) {
+    recipeHeading.textContent = "No Recipe Found";
+  } else {
+    recipeTitle.innerHTML = currentRecipe.title;
+    recipeImage.src = currentRecipe.image;
+    recipeImage.alt = currentRecipe.title;
+    recipeHeading.textContent = currentRecipe.title;
+    recipeDescription.textContent = currentRecipe.description;
+    recipePreperation.innerHTML = `
     <li><span>Total:</span> Approximately ${currentRecipe.prepTime.total}</li>
     <li><span>Preparation:</span>  ${currentRecipe.prepTime.prep}</li>
     <li><span>Cooking:</span>  ${currentRecipe.prepTime.cook}</li>
 `;
-recipeIngredients.innerHTML = currentRecipe.ingredients
-  .map((ingredient) => {
-    return `<li>${ingredient}</li>`;
-  })
-  .join("");
-recipeInstructions.innerHTML = currentRecipe.instructions
-  .map((nstruction) => {
-    return `<li>${nstruction}</li>`;
-  })
-  .join("");
-recipeNutrition.innerHTML = `
+    recipeIngredients.innerHTML = currentRecipe.ingredients
+      .map((ingredient) => {
+        return `<li>${ingredient}</li>`;
+      })
+      .join("");
+    recipeInstructions.innerHTML = currentRecipe.instructions
+      .map((nstruction) => {
+        return `<li>${nstruction}</li>`;
+      })
+      .join("");
+    recipeNutrition.innerHTML = `
    <tr>
         <th>Calories</th>
         <td>${currentRecipe.nutrition.calories}</td>
@@ -224,3 +231,5 @@ recipeNutrition.innerHTML = `
         <td>${currentRecipe.nutrition.fat}</td>
     </tr>
   `;
+  }
+}
