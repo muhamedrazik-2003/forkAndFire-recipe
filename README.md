@@ -37,20 +37,9 @@ After 10 months, it was completely redesigned:
 
 - HTML5
 - CSS3
-- JavaScript (ES6+)
+- JavaScript (ES6+) 
 
 
-## 📂 Project Structure
-odin-recipes/
-├── index.html # Homepage with recipe cards
-├── recipe.html # Single page to show any recipe
-├── recipe.js # JS to dynamically load recipe data
-├── index.css # Main stylesheet
-├── recipe.css # recipe.html and about.html stylesheet
-├── images/recipes # All recipe images
-└── images/about # Screenshots of old and new website
-
----
 
 ## 🧠 Key Concepts Learned
 
@@ -60,12 +49,15 @@ odin-recipes/
 - Passing and reading URL parameters
 - DOM manipulation using `querySelector` and dataset attributes
 
+
+
 ## 📸 Screenshots
 
 | Old Version | New Version |
 |-------------|-------------|
 | ![Old Homepage](./images/about/old-homepage-image.png) | ![New Homepage](./images/about/new-homepage-image.png) |
 | ![Old Recipe](./images/about/old-recipepage-image.png) | ![New Recipe](./images/about/new-recipepage-image.png) |
+ 
 
 
 ## 🚀 Future Improvements
@@ -76,13 +68,10 @@ odin-recipes/
 - Allow users to favorite recipes
 - Improve accessibility and contrast
 
----
 
 ## 👨‍🍳 Author
 
 **Muhamed Razik**  
 Created on August 26, 2024 • Redesigned on June 19, 2025  
 Inspired by [The Odin Project](https://www.theodinproject.com) and [Frontend Mentor](https://www.frontendmentor.io)
-
----
 
