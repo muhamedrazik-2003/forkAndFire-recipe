@@ -15,8 +15,8 @@ Originally started with basic HTML and CSS, this project was later redesigned wi
 
 ## 🔗 Live Site
 
-- 🌐 [Live Website](https://muhamedrazik-2003.github.io/odin-recipes/)
-- 📂 [GitHub Repository](https://github.com/muhamedrazik-2003/odin-recipes)
+- 🌐 [Live Website](https://muhamedrazik-2003.github.io/forkAndFire-recipe/)
+- 📂 [GitHub Repository](https://github.com/muhamedrazik-2003/forkAndFire-recipe)
 
 
 
