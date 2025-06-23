@@ -136,12 +136,10 @@ nav ul {
     font-weight: 500;
 }
 
-nav ul li>a {
-    color: rgb(64, 43, 17);
-}
 
-nav a {
-    color: rgb(117, 75, 31);
+nav a,
+nav span {
+    color: rgb(70, 45, 19);
 }
 
 nav a:hover {

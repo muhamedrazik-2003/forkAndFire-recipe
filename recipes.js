@@ -166,7 +166,7 @@ const currentPath = window.location.pathname;
 if (
   currentPath === "/" ||
   currentPath.includes("index.html") ||
-  document.title === "Odin's Recipe"
+  document.title === "Fork & Fire"
 ) {
   const cardData = recipes
     .map((recipe) => {

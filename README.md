@@ -1,4 +1,4 @@
-# 🍽️ Odin Recipes
+# 🍽️ Fork & Fire
 
 A simple, clean multi-page recipe website built as part of [The Odin Project](https://www.theodinproject.com) curriculum.  
 Originally started with basic HTML and CSS, this project was later redesigned with a modern UI and enhanced using JavaScript for dynamic recipe rendering.
